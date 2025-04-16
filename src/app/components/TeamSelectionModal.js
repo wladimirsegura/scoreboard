@@ -32,8 +32,8 @@ export default function TeamSelectionModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-gray-800 p-6 rounded-lg shadow-xl max-w-2xl w-full mx-4">
-        <h2 className="text-2xl font-bold text-white mb-4">Select Teams</h2>
+      <div className="bg-gray-800 p-4 rounded-lg shadow-xl max-w-2xl w-full mx-4">
+        <h2 className="text-xl font-bold text-white mb-4">Select Teams</h2>
         <p className="text-gray-300 mb-4">Please select two teams to start the game:</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -41,7 +41,7 @@ export default function TeamSelectionModal({ isOpen, onClose }) {
             <button
               key={team.id}
               onClick={() => handleTeamSelect(team.id)}
-              className={`p-4 rounded-lg border-2 ${
+              className={`p-4 rounded-md border-2 ${
                 selectedTeams.includes(team.id)
                   ? 'border-blue-500 bg-blue-900'
                   : 'border-gray-600 hover:border-gray-400'

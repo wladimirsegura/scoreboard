@@ -70,13 +70,43 @@ export function TeamsProvider({ children }) {
         { id: 1, number: '0', name: '高橋 義弘', position: 'C', goals: 0, assists: 0 },
         { id: 2, number: '0', name: '中野 隆治', position: 'C', goals: 0, assists: 0 },
         { id: 3, number: '0', name: '佐藤 祐子', position: 'FW', goals: 0, assists: 0 },
-        { id: 4, number: '0', name: 'nze Kopitar', position: 'C', goals: 0, assists: 0 },
-        { id: 5, number: '0', name: 'P.K. Subban', position: 'DF', goals: 0, assists: 0 },
-        { id: 6, number: '6', name: 'Shea Weber', position: 'DF', goals: 0, assists: 0 },
-        { id: 7, number: '33', name: 'Zdeno Chara', position: 'DF', goals: 0, assists: 0 },
-        { id: 8, number: '88', name: 'Brent Burns', position: 'DF', goals: 0, assists: 0 },
-        { id: 9, number: '30', name: 'Henrik Lundqvist', position: 'GK', goals: 0, assists: 0 },
-        { id: 10, number: '72', name: 'Sergei Bobrovsky', position: 'GK', goals: 0, assists: 0 }
+        { id: 4, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 5, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 6, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 7, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 8, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+      ]
+    },
+    { 
+      id: 5, 
+      name: 'Undefeated', 
+      score: 0, 
+      shots: 0,
+      roster: [
+        { id: 1, number: '0', name: '佐藤 豪太', position: 'C', goals: 0, assists: 0 },
+        { id: 2, number: '0', name: '中野 ', position: 'C', goals: 0, assists: 0 },
+        { id: 3, number: '0', name: '南', position: 'FW', goals: 0, assists: 0 },
+        { id: 4, number: '0', name: '木村 雅直', position: 'DF', goals: 0, assists: 0 },
+        { id: 5, number: '0', name: '服部 光秀', position: 'DF', goals: 0, assists: 0 },
+        { id: 6, number: '0', name: '土谷 力', position: 'FW', goals: 0, assists: 0 },
+        { id: 7, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 8, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+      ]
+    },
+    { 
+      id: 6, 
+      name: 'コンパネロス', 
+      score: 0, 
+      shots: 0,
+      roster: [
+        { id: 1, number: '0', name: 'せいじ', position: 'C', goals: 0, assists: 0 },
+        { id: 2, number: '0', name: '-', position: 'C', goals: 0, assists: 0 },
+        { id: 3, number: '0', name: '-', position: 'FW', goals: 0, assists: 0 },
+        { id: 4, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 5, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 6, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 7, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
+        { id: 8, number: '0', name: '-', position: 'HP', goals: 0, assists: 0 },
       ]
     }
   ]);

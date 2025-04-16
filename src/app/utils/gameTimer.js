@@ -2,7 +2,7 @@
 
 export class GameTimer {
   constructor() {
-    this.totalPeriodSeconds = 10 * 60; // 20 minutes per period
+    this.totalPeriodSeconds = 8 * 60; // 20 minutes per period
     this.elapsedSeconds = 0;
     this.isRunning = false;
     this.timerInterval = null;
