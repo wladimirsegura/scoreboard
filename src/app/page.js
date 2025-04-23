@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { AuthNav } from '@/components/auth/auth-nav';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
             <Link href="/teams" className="text-[#F3F4F6] hover:text-white transition">
               Teams
             </Link>
+            <AuthNav />
           </div>
         </div>
       </nav>
