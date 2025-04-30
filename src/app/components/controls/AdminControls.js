@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { useGameState } from '../../context/GameStateContext';
+import { useGame } from '../../contexts/GameContext';
 import { useTeams } from '../../context/TeamsContext';
 import GoalModal from './GoalModal';
 import DecreaseModal from './DecreaseModal';
 import DownloadButton from './DownloadButton';
 
 const AdminControls = () => {
-  const { gameState, handleShotChange, handlePeriodChange, handleClockToggle, handleScoreChange } = useGameState();
+  const { gameState, handleShotChange, handlePeriodChange, handleClockToggle, handleScoreChange } = useGame();
   const { teams, recordGoal, getActiveTeams } = useTeams();
   const [goalTime, setGoalTime] = useState(null);
   const [showGoalModal, setShowGoalModal] = useState(false);

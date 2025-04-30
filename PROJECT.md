@@ -1,4 +1,4 @@
-# Scoreboard Project Documentation
+y# Scoreboard Project Documentation
 
 ## Project Overview
 This is a modern scoreboard application built with Next.js, Supabase, and shadcn/ui. It provides real-time game tracking, team management, and statistics features for sports events.

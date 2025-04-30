@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { useTeams } from '../context/TeamsContext';
-import { useGameState } from '../context/GameStateContext';
+import { useGame } from '../contexts/GameContext';
 import TeamSelectionModal from './TeamSelectionModal';
 
 export default function GameInitializer({ children }) {
   const [showTeamSelection, setShowTeamSelection] = useState(true);
   const [selectedTeams, setSelectedTeams] = useState([]);
-  const { teams, setSelectedTeams: setActiveTeams } = useTeams();
-  const { gameState } = useGameState();
+  const { teams } = useTeams();
+  const { gameState, initializeGame } = useGame();
 
   useEffect(() => {
     // Show team selection modal when game is not in progress
@@ -18,10 +18,16 @@ export default function GameInitializer({ children }) {
     }
   }, [gameState.isRunning, selectedTeams]);
 
-  const handleTeamSelection = (selectedTeamIds) => {
-    setSelectedTeams(selectedTeamIds);
-    setActiveTeams(selectedTeamIds);
-    setShowTeamSelection(false);
+  const handleTeamSelection = async (selectedTeamIds) => {
+    try {
+      const [homeTeamId, awayTeamId] = selectedTeamIds;
+      await initializeGame(homeTeamId, awayTeamId);
+      setSelectedTeams(selectedTeamIds);
+      setShowTeamSelection(false);
+    } catch (error) {
+      console.error('Failed to initialize game:', error);
+      // Handle error appropriately
+    }
   };
 
   const filteredChildren = () => {

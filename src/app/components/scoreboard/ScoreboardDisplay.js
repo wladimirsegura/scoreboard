@@ -1,9 +1,9 @@
 'use client';
 
-import { useGameState } from '../../context/GameStateContext';
+import { useGame } from '../../context/GameContext';
 
 const ScoreboardDisplay = () => {
-  const { gameState } = useGameState();
+  const { gameState } = useGame();
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 rounded-lg bg-[#0A192F] text-[#F3F4F6] border border-[#1E3A8A] shadow-lg">

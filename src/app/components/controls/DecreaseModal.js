@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { useTeams } from '@/app/context/TeamsContext';
-import { useGameState } from '@/app/context/GameStateContext';
+import { useGame } from '@/app/contexts/GameContext';
 
 export default function DecreaseModal({ isOpen, onClose, team, onDecrease }) {
   const { timeline, removeGoal } = useTeams();
-  const { handleScoreChange } = useGameState();
+  const { handleScoreChange } = useGame();
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   if (!isOpen) return null;
